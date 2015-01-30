@@ -1,0 +1,31 @@
+{
+	"author": "Rob Evans (Irrelon Software Limited)",
+	"name": "OpenZWaveAlarm",
+	"description": "ZWave Alarm Control System",
+	"version": "1.0.0",
+	"dependencies": {
+		"forever": "*",
+		"express": "3.x",
+		"request": "*",
+		"async": "*"
+	},
+	"main": "./index",
+	"engines": {
+		"node": "*"
+	},
+	"scripts": {
+		"start": "forever start index.js",
+		"stop": "forever stop index.js"
+	},
+	"ssl": {
+		"enable": true,
+		"key": "./localhost.key",
+		"cert": "./localhost.crt"
+	},
+	"server": {
+		"clientFacing": {
+			"host": "0.0.0.0",
+			"port": 8000
+		}
+	}
+}
